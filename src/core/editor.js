@@ -1,4 +1,4 @@
-import '../resources/index';
+import './res/index';
 import util from './util';
 
 export default class Editor {

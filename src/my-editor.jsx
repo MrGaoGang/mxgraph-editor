@@ -3,7 +3,7 @@ import { message, Layout } from 'antd';
 
 import Sidebar from './sidebar';
 import Toolbar from './toolbar';
-import Editor from '../src/editor';
+import Editor from './core/editor';
 
 import IMAGE_SHAPES from './shape-config/image-shape';
 import CARD_SHAPES from './shape-config/card-shape';

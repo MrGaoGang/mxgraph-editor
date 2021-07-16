@@ -1,5 +1,5 @@
 import Graph from './Graph';
-const IMAGE_PATH = './imgs';
+const IMAGE_PATH = './res/images';
 /**
  * Hover icons are used for hover, vertex handler and drag from sidebar.
  */

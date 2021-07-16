@@ -1,7 +1,7 @@
-import DEFAULT_CARD_SHAPES from "../config/card-shape";
-import DEFAULT_IMAGE_SHAPES from "../config/image-shape";
-import STENCILS from "../config/stencils/index";
-import GENERAL_SHAPES from "../config/general-shape";
+import DEFAULT_CARD_SHAPES from "./config/card-shape";
+import DEFAULT_IMAGE_SHAPES from "./config/image-shape";
+import STENCILS from "./config/stencils/index";
+import GENERAL_SHAPES from "./config/general-shape";
 import "./basic-shapes-generator";
 
 export default {
@@ -114,7 +114,7 @@ export default {
 
     // Rounded edge and vertex handles
     var touchHandle = new mxImage(
-      "../resources/images/handle-main.png",
+      "./res/images/handle-main.png",
       17,
       17
     );
@@ -126,7 +126,7 @@ export default {
     new Image().src = touchHandle.src;
 
     // Adds connect icon to selected vertex
-    var connectorSrc = "../resources/images/handle-secondary.png";
+    var connectorSrc = "./res/images/handle-secondary.png";
 
     var vertexHandlerInit = mxVertexHandler.prototype.init;
     mxVertexHandler.prototype.init = function () {
