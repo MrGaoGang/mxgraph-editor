@@ -1,0 +1,42 @@
+name: 自动部署
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs: # 作业
+  build-and-deploy: # 作业名称
+    runs-on: ubuntu-latest # 运行的环境
+
+    steps: #步骤
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+      - name: npm install
+        run: npm install
+        
+      - name: Build
+        run: npm run build
+      
+      - name: Install Tencent coscmd
+        run:  sudo pip install coscmd
+        
+      - name: Tencent Configure coscmd
+        env:
+          SECRET_ID: ${{ secrets.SECRET_ID }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          BUCKET: ui-builder-1252273386
+          REGION: ap-nanjing
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+        
+      - name: Tencent COS Upload
+        run: coscmd upload -rs  ./dist /flows --ignore "./.git/*"

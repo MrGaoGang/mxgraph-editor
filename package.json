@@ -1,17 +1,14 @@
 {
   "name": "mxgraph-editor",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "mxgraph editor",
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "build": "webpack --mode development && cp -r ./resources ./dist",
     "lib": "babel src --out-dir lib && gulp"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:korbinzhao/mxgraph-editor.git"
-  },
+
   "keywords": [
     "mxgraph",
     "editor",
@@ -19,10 +16,10 @@
   ],
   "author": "korbinzhao",
   "bugs": {
-    "url": "https://github.com/korbinzhao/mxgraph-editor/issues"
+    "url": "https://github.com/mrgaogang/mxgraph-editor/issues"
   },
   "license": "MIT",
-  "homepage": "https://github.com/korbinzhao/mxgraph-editor",
+  "homepage": "https://github.com/mrgaogang/mxgraph-editor",
   "devDependencies": {
     "autoprefixer": "^9.4.3",
     "babel-cli": "^6.26.0",
