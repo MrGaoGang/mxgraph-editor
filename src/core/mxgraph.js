@@ -1,6 +1,6 @@
 import mx from "mxgraph";
 const mxgraph = mx({
-  mxImageBasePath: "/flows/res/images",
+  mxImageBasePath: "/res/images",
 });
 window.mxUtils = mxgraph.mxUtils;
 window.mxCylinder = mxgraph.mxCylinder;
