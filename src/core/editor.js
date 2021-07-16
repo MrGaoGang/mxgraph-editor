@@ -1,4 +1,4 @@
-import './res/index';
+import  "./mxgraph";
 import util from './util';
 
 export default class Editor {
