@@ -1,4 +1,5 @@
 import './App.css';
+import 'antd/dist/antd.css';
 import MyEditor from "./my-editor";
 function App() {
   return (

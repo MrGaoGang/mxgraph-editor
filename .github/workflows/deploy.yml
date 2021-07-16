@@ -39,4 +39,4 @@ jobs: # 作业
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
         
       - name: Tencent COS Upload
-        run: coscmd upload -rs  ./dist /flows --ignore "./.git/*"
+        run: coscmd upload -rs  ./build /flows --ignore "./.git/*"

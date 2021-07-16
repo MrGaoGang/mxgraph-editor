@@ -139,5 +139,3 @@ import './js/io/mxDefaultKeyHandlerCodec';
 import './js/io/mxDefaultToolbarCodec';
 import './js/io/mxDefaultPopupMenuCodec';
 import './js/io/mxEditorCodec';
-
-import './css/common.css';

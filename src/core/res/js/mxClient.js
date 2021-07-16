@@ -5,7 +5,7 @@
  */
 
 // Disables synchronous loading of resources
-window.mxImageBasePath = 'resources/images';
+window.mxImageBasePath = 'res/images';
 window.mxLoadResources = false;
 
 var mxClient = {
