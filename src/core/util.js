@@ -114,7 +114,7 @@ export default {
 
     // Rounded edge and vertex handles
     var touchHandle = new mxImage(
-      "./res/images/handle-main.png",
+      "./flows/res/images/handle-main.png",
       17,
       17
     );
@@ -126,7 +126,7 @@ export default {
     new Image().src = touchHandle.src;
 
     // Adds connect icon to selected vertex
-    var connectorSrc = "./res/images/handle-secondary.png";
+    var connectorSrc = "./flows/res/images/handle-secondary.png";
 
     var vertexHandlerInit = mxVertexHandler.prototype.init;
     mxVertexHandler.prototype.init = function () {
